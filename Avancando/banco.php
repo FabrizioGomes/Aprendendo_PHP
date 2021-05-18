@@ -1,6 +1,6 @@
 <?php
 
-require 'funcoes.php';
+require_once 'funcoes.php';
 
 $contasCorrentes = [
     '123.456.789-10' => [
@@ -31,12 +31,16 @@ $contasCorrentes['123.456.789-12'] = depositar(
     10000
  );
 
- titularComLetrasMaiusculas($contasCorrentes['123.456.789-12']);
+unset ($contasCorrentes['123.456.789-11']);
+
+titularComLetrasMaiusculas($contasCorrentes['123.456.789-12']);
 
 
 foreach ($contasCorrentes as $cpf => $conta) {
+    ['titular' => $titular, 'saldo' => $saldo] = $conta;
+
     exibeMensagem(
-        "$cpf {$conta['titular']} {$conta['saldo']}"
+        "$cpf $titular $saldo"
     );
 }
 
