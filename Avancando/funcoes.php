@@ -1,5 +1,6 @@
 <?php
 
+
 function sacar( array $conta, float $valoraSacar) : array
 {
     if ($valoraSacar > $conta['saldo']) {
@@ -29,5 +30,11 @@ function titularComLetrasMaiusculas(array &$conta)
 }
 
 function exibeMensagem( string $mensagem){
-    echo $mensagem . PHP_EOL;
+    echo $mensagem . '<br>';
+}
+
+function exibeConta (array $conta)
+{
+    ['titular' => $titular, 'saldo' => $saldo] =$conta;
+   echo "<li>Titular:$conta[titular]. Saldo: {$conta['saldo']}</li>";
 }
