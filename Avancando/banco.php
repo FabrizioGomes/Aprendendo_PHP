@@ -35,18 +35,13 @@ unset ($contasCorrentes['123.456.789-11']);
 
 titularComLetrasMaiusculas($contasCorrentes['123.456.789-12']);
 
-
 /*echo "<ul>";
-
 foreach ($contasCorrentes as $cpf => $conta) {
    exibeConta($conta);
 }
 
 echo "</ul>";
 */
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +54,7 @@ echo "</ul>";
 </head>
 <body>
     <h1> Contas correntes </h1>
+<<<<<<< HEAD
     <dl>
         <?php foreach($contasCorrentes as $cpf => $conta){?>
         <dt>
@@ -69,6 +65,8 @@ echo "</ul>";
         </dd>
     <?php } ?>    
     </dl>
+
+>>>>>>> 23937157d4afa113c721386aaef66fc736a1ac21
     
 </body>
 </html>
