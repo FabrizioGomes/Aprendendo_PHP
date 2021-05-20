@@ -17,7 +17,10 @@ echo $primeiraConta->recuperaSaldo() . PHP_EOL;
 
 $giovani = new Titular(new Cpf('698.549.548-10'), 'Giovani Vicente');
 $segundaConta = new Conta($giovani);
-var_dump($segundaConta);
+
+echo $segundaConta->recuperaNomeTitular() . PHP_EOL;
+echo $segundaConta->recuperaCpfTitular() . PHP_EOL;
+echo $segundaConta->recuperaSaldo() . PHP_EOL;
 
 $outra = new Conta(new Titular(new Cpf('123.090.998-01'), 'Abcdefg'));
 
